@@ -1,5 +1,4 @@
 "use client"
-
 import React, { useState} from 'react';
 import DeleteIcon from '../../../images/delete.png'
 import Image from 'next/image';

@@ -5,8 +5,6 @@ import DeleteIcon from '../../../images/delete.png'
 import Image from 'next/image';
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 
-
-
 interface SchoolContent {
     name: string;
     teamID: string;
