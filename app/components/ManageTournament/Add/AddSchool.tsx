@@ -22,7 +22,6 @@ interface Props {
 }
 
 const AddSchool: React.FC<Props> = ({ isOpen, onAdd, onClose, id }) => {
-    if (!isOpen) return null;
 
     const [schools, setSchools] = useState<SchoolContent[]>([
         { name: "", teamID: "", flight: "", id: id + 0 },
@@ -32,6 +31,8 @@ const AddSchool: React.FC<Props> = ({ isOpen, onAdd, onClose, id }) => {
     ]);
 
     const [nextId, setNextId] = useState<number>(4 + id);
+
+    if (!isOpen) return null;
 
     const addSchool = () => {
         setSchools([...schools, { name: "", teamID: "", flight: "", id: nextId }]);

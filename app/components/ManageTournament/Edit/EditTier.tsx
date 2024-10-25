@@ -16,8 +16,9 @@ interface Props {
 }
 
 const EditTier: React.FC<Props> = ({ isOpen, onEdit, onClose, deftier, id }) => {
-    if (!isOpen) return null;
     const [tier, setTier] = useState("");
+
+    if (!isOpen) return null;
 
     const submit = () => {
         onEdit({tier: tier, id: id});

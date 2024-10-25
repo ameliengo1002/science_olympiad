@@ -18,7 +18,6 @@ interface Props {
 
 
 const AddTier: React.FC<Props> = ({ isOpen, onAdd, onClose, name }) => {
-    if (!isOpen) return null;
 
     const [groups, setGroups] = useState<GroupContent[]>([
         {tier: "", id: 1},
@@ -28,6 +27,8 @@ const AddTier: React.FC<Props> = ({ isOpen, onAdd, onClose, name }) => {
     ]);
     
     const [nextId, setNextId] = useState<number>(5);
+
+    if (!isOpen) return null;
 
     const addGroup = () => {
         setGroups([...groups, {tier: "", id: nextId}]);

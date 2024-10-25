@@ -28,7 +28,7 @@ const CreateTourneyLanding = () => {
             </p>
 
             <p className="font-bold">
-              To proceed, please click the create tournament button and enter the required details. You will be able to outline the tournament's structure, 
+              To proceed, please click the create tournament button and enter the required details. You will be able to outline the tournament&apos;s structure, 
               establish events, and manage participant registrations with ease.
             </p>
           </div>

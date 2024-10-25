@@ -23,7 +23,6 @@ interface Props {
 
 
 const AddTimeBlock: React.FC<Props> = ({ isOpen, onAdd, onClose, id }) => {
-    if (!isOpen) return null;
 
     const [timeBlocks, setTimeBlocks] = useState<timeBlockContent[]>([
         {start: "", end: "", address: "", roomNumber: 0, id: 0 + id},
@@ -33,6 +32,8 @@ const AddTimeBlock: React.FC<Props> = ({ isOpen, onAdd, onClose, id }) => {
     ]);
     
     const [nextId, setNextId] = useState<number>(4 + id);
+
+    if (!isOpen) return null;
 
     const addTimeBlock = () => {
         setTimeBlocks([...timeBlocks, {start: "", end: "", address: "", roomNumber: 0, id:nextId}]);
